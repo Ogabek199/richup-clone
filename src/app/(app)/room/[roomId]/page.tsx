@@ -879,7 +879,7 @@ export default function RoomPage() {
               <div className="flex flex-wrap gap-2">
                 {isHost && lobby ? (
                   <Button
-                    className="h-10"
+                    className="h-10 whitespace-nowrap px-4"
                     disabled={
                       actionBusy ||
                       players.length < MIN_PLAYERS_TO_START ||
