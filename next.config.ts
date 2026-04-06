@@ -21,8 +21,11 @@ const nextConfig: NextConfig = {
               "default-src 'self'",
               "img-src 'self' data: https: blob:",
               "style-src 'self' 'unsafe-inline'",
-              "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+              // Allow Google/Firebase auth scripts (gapi) + Next dev tooling
+              "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://apis.google.com https://accounts.google.com https://www.gstatic.com",
+              "script-src-elem 'self' 'unsafe-inline' https://apis.google.com https://accounts.google.com https://www.gstatic.com",
               "connect-src 'self' https: wss:",
+              "frame-src 'self' https://accounts.google.com https://apis.google.com",
               "frame-ancestors 'none'",
               "base-uri 'self'",
               "form-action 'self'",

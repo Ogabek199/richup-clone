@@ -15,7 +15,6 @@ import { Input } from "@/components/ui/Input";
 import { GoogleIcon } from "@/components/ui/GoogleIcon";
 import { useI18n } from "@/i18n/I18nProvider";
 import { useToast } from "@/components/ToastProvider";
-import { LanguageToggleBox } from "@/components/LanguageToggleBox";
 
 const schema = z.object({
   displayName: z.string().min(2).max(24),
@@ -42,9 +41,6 @@ export default function SignupClient({ nextUrl }: { nextUrl?: string }) {
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_circle_at_30%_10%,rgba(124,58,237,0.35),transparent_50%),radial-gradient(800px_circle_at_80%_30%,rgba(34,197,94,0.25),transparent_55%)]" />
-      <div className="relative mx-auto flex w-full max-w-md justify-end px-6 pt-6">
-        <LanguageToggleBox showLabel={false} />
-      </div>
       <div className="relative flex flex-1 items-center justify-center px-6 py-12">
       <Card className="relative w-full max-w-md">
         <div className="mb-6">
